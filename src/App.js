@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { Switch, Route } from 'react-router-dom'
 import List from "./components/list.js";
+import Home from "./components/home.js";
 import 'jquery/dist/jquery.min.js';
 import 'popper.js/dist/popper.min.js';
 import 'bootstrap/dist/js/bootstrap.min.js';
@@ -14,7 +16,11 @@ class App extends Component {
           <h1 className="App-title">My Account</h1>
         </header>
         <div className="App-intro">
-          <List/>
+
+        <Switch>
+          <Route exact path='/' component={Home}/>
+          <Route exact path='/panel' component={List}/>
+        </Switch>
         </div>
       </div>
     ); 

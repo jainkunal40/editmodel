@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import Modal from './modal.js';
+import { Link } from 'react-router-dom'
+var buttonStyle = {
+  margin: '10px 10px 10px 0'
+};
 
 class List extends Component {
   constructor(props) {
@@ -71,6 +75,9 @@ class List extends Component {
           email={modalData.email}
           saveModalDetails={this.saveModalDetails}
         />
+         <div className="text-center"><Link to='/'><button
+        className="btn btn-warning"
+        style={buttonStyle}>Go to Home</button></Link></div>
       </div>
     );
   }
